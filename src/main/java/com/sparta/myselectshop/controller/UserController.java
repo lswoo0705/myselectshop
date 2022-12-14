@@ -6,13 +6,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("/api")
-public class ShopController {
+@RequestMapping("/api/user")
+public class UserController {
 
-    @GetMapping("/shop")
-    public ModelAndView shop() {
-        ModelAndView modelAndView = new ModelAndView("index");
-        modelAndView.addObject("username","");
-        return modelAndView;
+    @GetMapping("/signup")
+    public ModelAndView signupPage() {
+        return new ModelAndView("signup");
     }
+
+    @GetMapping("/login")
+    public ModelAndView loginPage() {
+        return new ModelAndView("login");
+    }
+
 }
