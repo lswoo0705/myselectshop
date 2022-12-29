@@ -36,6 +36,14 @@ dependencies {
 
     // 스프링 시큐리티
     implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Mockito
+    testImplementation 'org.mockito:mockito-core:4.8.0'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.8.0'
+}
+
+test {
+    useJUnitPlatform()
 }
 
 tasks.named('test') {
